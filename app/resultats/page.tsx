@@ -92,14 +92,14 @@ export default function Resultats() {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-black text-slate-800 mb-6">
+          <h1 className="text-4xl md:text-5xl font-black text-slate-800 mb-6">
             Nos{" "}
             <span className="text-blue-600 relative">
               résultats
               <div className="absolute -bottom-2 left-0 right-0 h-3 bg-yellow-300 opacity-30 transform -skew-x-12"></div>
             </span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Découvrez les performances de nos athlètes ! Chaque résultat raconte une histoire de dépassement,
             d'entraînement et de passion partagée.
           </p>
@@ -198,7 +198,7 @@ export default function Resultats() {
 
         {/* Section informative */}
         <div className="mt-16 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border-l-4 border-blue-500">
-          <h3 className="text-3xl font-bold text-slate-800 mb-4">🏆 Vous avez participé à une compétition ?</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">🏆 Vous avez participé à une compétition ?</h3>
           <p className="text-slate-600 mb-6 text-lg leading-relaxed">
             Partagez vos exploits avec le club ! Que ce soit une victoire éclatante ou une belle participation, chaque
             résultat mérite d'être célébré. Contactez-nous pour l'ajouter à cette page.

@@ -23,7 +23,7 @@ export default function HomePage() {
             </span>
           </div>
 
-          <h2 className="text-6xl font-black text-slate-800 mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-black text-slate-800 mb-6 leading-tight">
             L'aventure{" "}
             <span className="text-blue-600 relative">
               triathlon
@@ -33,7 +33,7 @@ export default function HomePage() {
             commence ici !
           </h2>
 
-          <p className="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
             Rejoignez notre famille de passionnés à Amiens ! Que vous soyez débutant ou confirmé, nous vous accompagnons
             dans votre progression avec bonne humeur et expertise.
           </p>
@@ -66,7 +66,7 @@ export default function HomePage() {
 
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-slate-800 mb-4">Trois disciplines, une passion</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Trois disciplines, une passion</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto rounded-full"></div>
           </div>
 
@@ -138,7 +138,7 @@ export default function HomePage() {
 
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Nos chiffres parlent d'eux-mêmes</h3>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Nos chiffres parlent d'eux-mêmes</h3>
             <p className="text-slate-300 text-lg">Une communauté qui grandit et qui performe !</p>
           </div>
 
@@ -187,7 +187,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="text-6xl text-blue-200 mb-6">"</div>
-            <blockquote className="text-2xl text-slate-700 font-medium leading-relaxed mb-8 italic">
+            <blockquote className="text-lg md:text-2xl text-slate-700 font-medium leading-relaxed mb-8 italic">
               Rejoindre Amiens Triathlon a changé ma vie ! L'ambiance est fantastique, les entraîneurs sont top et j'ai
               découvert des disciplines que je n'aurais jamais osé essayer seule. Maintenant, je ne peux plus m'en
               passer !
