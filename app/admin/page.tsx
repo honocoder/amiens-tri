@@ -11,6 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Trash2, Edit, Plus, Trophy, Medal, Award, Lock, Loader2, AlertCircle } from "lucide-react"
 import { resultatsAPI, authAPI, type Resultat } from "@/lib/supabase"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -223,8 +225,9 @@ export default function AdminPage() {
 
   // Interface d'administration
   return (
-    <div className="min-h-screen bg-slate-50 p-4">
-      <div className="container mx-auto max-w-6xl">
+    <div className="min-h-screen bg-slate-50">
+      <Header />
+      <div className="container mx-auto max-w-6xl p-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -496,6 +499,8 @@ export default function AdminPage() {
           </CardContent>
         </Card>
       </div>
+      
+      <Footer />
     </div>
   )
 }

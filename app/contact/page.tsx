@@ -11,6 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, Phone, MapPin, Clock, Waves, Send } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -34,60 +36,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-500 rounded-full flex items-center justify-center">
-                <Waves className="w-6 h-6 text-white" />
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900">Amiens Triathlon</h1>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all">
-                Accueil
-              </Link>
-              <Link
-                href="/nous-rejoindre"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Nous rejoindre
-              </Link>
-              <Link
-                href="/resultats"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Nos résultats
-              </Link>
-              <Link
-                href="/entrainements"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Nos entraînements
-              </Link>
-              <Link
-                href="/ecole-triathlon"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                L'école de triathlon
-              </Link>
-              <Link
-                href="/histoire"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Histoire du club
-              </Link>
-              <Link
-                href="/contact"
-                className="text-slate-700 hover:text-blue-600 font-medium border-b-2 border-blue-500"
-              >
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
@@ -319,6 +268,8 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   )
 }

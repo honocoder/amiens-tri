@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'Amiens Triathlon',
   description: 'Club de triathlon d\'Amiens - Nager, Pédaler, Courir. Rejoignez notre communauté de passionnés !',
   generator: 'Amiens Triathlon',
+  icons: {
+    icon: '/logo-inverted.png',
+    shortcut: '/logo-inverted.png',
+    apple: '/logo-inverted.png',
+  },
 }
 
 export default function RootLayout({

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, XCircle, Loader2, Database, Key, Shield, AlertTriangle } from "lucide-react"
 import { resultatsAPI } from "@/lib/supabase"
+import Header from "@/components/Header"
 
 interface TestResult {
   name: string
@@ -185,8 +186,9 @@ ALTER TABLE admin_users DISABLE ROW LEVEL SECURITY;`
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4">
-      <div className="container mx-auto max-w-4xl">
+    <div className="min-h-screen bg-slate-50">
+      <Header />
+      <div className="container mx-auto max-w-4xl p-4">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-slate-800 mb-4">Test Supabase</h1>
           <p className="text-slate-600">Vérification de la configuration et des fonctionnalités</p>

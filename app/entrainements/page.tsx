@@ -1,70 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Clock, MapPin, Users, Waves, Bike, Zap, Calendar, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 export default function Entrainements() {
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Header avec style cohérent */}
-      <header className="bg-white shadow-lg border-b-4 border-blue-500">
-        <div className="container mx-auto px-4 py-6">
-          <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 rounded-full flex items-center justify-center transform rotate-12">
-                  <Waves className="w-7 h-7 text-white transform -rotate-12" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full"></div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-slate-800 tracking-tight">Amiens Triathlon</h1>
-                <p className="text-xs text-slate-500 font-medium">Nager • Pédaler • Courir</p>
-              </div>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all">
-                Accueil
-              </Link>
-              <Link
-                href="/nous-rejoindre"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Nous rejoindre
-              </Link>
-              <Link
-                href="/resultats"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Nos résultats
-              </Link>
-              <Link
-                href="/entrainements"
-                className="text-slate-700 hover:text-blue-600 font-medium border-b-2 border-blue-500"
-              >
-                Nos entraînements
-              </Link>
-              <Link
-                href="/ecole-triathlon"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                L'école de triathlon
-              </Link>
-              <Link
-                href="/histoire"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Histoire du club
-              </Link>
-              <Link
-                href="/contact"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -380,81 +323,7 @@ export default function Entrainements() {
         </section>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16 px-4 mt-16">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center">
-                  <Waves className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-2xl font-bold">Amiens Triathlon</h4>
-                  <p className="text-slate-400 text-sm">Nager • Pédaler • Courir</p>
-                </div>
-              </div>
-              <p className="text-slate-300 leading-relaxed mb-6">
-                Plus qu'un club, une famille ! Depuis 2009, nous accompagnons les passionnés de triathlon dans la Somme
-                avec bonne humeur et expertise.
-              </p>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold">FB</span>
-                </div>
-                <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold">IG</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h5 className="font-bold mb-4 text-yellow-400">Navigation</h5>
-              <div className="space-y-3">
-                <Link href="/nous-rejoindre" className="block text-slate-300 hover:text-white transition-colors">
-                  → Nous rejoindre
-                </Link>
-                <Link href="/entrainements" className="block text-slate-300 hover:text-white transition-colors">
-                  → Entraînements
-                </Link>
-                <Link href="/ecole-triathlon" className="block text-slate-300 hover:text-white transition-colors">
-                  → École de triathlon
-                </Link>
-                <Link href="/resultats" className="block text-slate-300 hover:text-white transition-colors">
-                  → Résultats
-                </Link>
-                <Link href="/contact" className="block text-slate-300 hover:text-white transition-colors">
-                  → Contact
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <h5 className="font-bold mb-4 text-yellow-400">On vous attend !</h5>
-              <div className="space-y-3 text-slate-300 text-sm">
-                <p className="flex items-center">
-                  <span className="mr-2">📧</span> contact@amiens-triathlon.fr
-                </p>
-                <p className="flex items-center">
-                  <span className="mr-2">📱</span> 06 11 73 21 11
-                </p>
-                <p className="flex items-center">
-                  <span className="mr-2">📍</span> 26 rue Marcel Pagnol, 80480 DURY
-                </p>
-                <p className="flex items-center">
-                  <span className="mr-2">⏰</span> Lun-Sam : 18h-20h30
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-slate-800 mt-12 pt-8 text-center">
-            <p className="text-slate-400">
-              &copy; {new Date().getFullYear()} Amiens Triathlon - Fait avec ❤️ pour les passionnés de tri !
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge"
 import { Trophy, Medal, Award, Calendar, MapPin, Waves, Loader2 } from "lucide-react"
 import Link from "next/link"
 import { resultatsAPI, type Resultat } from "@/lib/supabase"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 function getPositionIcon(position: number) {
   if (position === 1) return <Trophy className="w-5 h-5 text-yellow-500" />
@@ -85,69 +87,7 @@ export default function Resultats() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Header identique aux autres pages */}
-      <header className="bg-white shadow-lg border-b-4 border-blue-500">
-        <div className="container mx-auto px-4 py-6">
-          <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 rounded-full flex items-center justify-center transform rotate-12">
-                  <Waves className="w-7 h-7 text-white transform -rotate-12" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full"></div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-slate-800 tracking-tight">Amiens Triathlon</h1>
-                <p className="text-xs text-slate-500 font-medium">Nager • Pédaler • Courir</p>
-              </div>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <Link
-                href="/"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Accueil
-              </Link>
-              <Link
-                href="/nous-rejoindre"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Nous rejoindre
-              </Link>
-              <Link
-                href="/resultats"
-                className="text-slate-700 hover:text-blue-600 font-medium border-b-2 border-blue-500"
-              >
-                Nos résultats
-              </Link>
-              <Link
-                href="/entrainements"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Nos entraînements
-              </Link>
-              <Link
-                href="/ecole-triathlon"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                L'école de triathlon
-              </Link>
-              <Link
-                href="/histoire"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Histoire du club
-              </Link>
-              <Link
-                href="/contact"
-                className="text-slate-700 hover:text-blue-600 font-medium hover:border-b-2 hover:border-blue-500 transition-all"
-              >
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
@@ -286,6 +226,8 @@ export default function Resultats() {
           </Link>
         </div>
       </div>
+      
+      <Footer />
     </div>
   )
 }
